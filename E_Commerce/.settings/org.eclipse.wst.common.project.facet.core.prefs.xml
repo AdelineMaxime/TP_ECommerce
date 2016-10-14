@@ -1,7 +1,13 @@
 <root>
+<<<<<<< HEAD
   <facet id="jpt.jpa">
     <node name="libprov">
       <attribute name="provider-id" value="jpa-no-op-library-provider"/>
+=======
+  <facet id="jst.jsf">
+    <node name="libprov">
+      <attribute name="provider-id" value="jsf-no-op-library-provider"/>
+>>>>>>> branch 'master' of https://github.com/AdelineMaxime/TP_ECommerce.git
     </node>
   </facet>
 </root>
