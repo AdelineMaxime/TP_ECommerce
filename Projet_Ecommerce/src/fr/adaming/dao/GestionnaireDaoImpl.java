@@ -15,7 +15,7 @@ public class GestionnaireDaoImpl implements IGestionnaireDao {
 	/**Spécification du contexte que l'on utilise
 	 * 
 	 */
-	@PersistenceContext(unitName="")
+	@PersistenceContext(unitName="PU")
 	EntityManager em;
 	
 	/**Réécriture de la méthode isExist de l'interface servant à l'identification du Gestionnaire 
@@ -27,7 +27,7 @@ public class GestionnaireDaoImpl implements IGestionnaireDao {
 		/**Création de la requête permettant de trouver le Gestionnaire dans la base de donnée
 		 * 
 		 */
-		String reqExist="Select u from Gestionnaire as u where u.login=:plogin and u.mdp:=pmdp";
+		String reqExist="Select u from Gestionnaire as u where u.login=:plogin and u.mdp=:pmdp";
 		
 		
 		Query query=em.createQuery(reqExist);
