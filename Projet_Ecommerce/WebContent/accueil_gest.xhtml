@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>#{msg.home}</title>
+</h:head>
+
+<h:body>
+	<ui:insert>
+		<ui:include src="/Templates/Menu_gestionnaire.xhtml" />
+	</ui:insert>
+
+
+
+	<div align="center">
+		<h:form>
+			<p:growl id="messages" />
+
+			<p:splitButton value="#{msg.gest_prod}">
+				<p:menuitem value="#{msg.add_prod}" action="addProduct"
+					update="messages" icon="ui-icon-doc-add" />
+				<p:separator />
+				<p:menuitem value="#{msg.delete_prod}" action="deleteProduct"
+					icon="ui-icon-doc-remove" />
+			</p:splitButton>
+
+			<p:splitButton value="#{msg.gest_cat}">
+				<p:menuitem value="#{msg.add_cat}" action="addCat" update="messages"
+					icon="ui-icon-doc-add" />
+				<p:separator />
+				<p:menuitem value="#{msg.delete_cat}" action="deleteCat"
+					icon="ui-icon-doc-remove" />
+				<p:separator />
+				<p:menuitem value="#{msg.update_cat}" action="gestionCat" />
+			</p:splitButton>
+		</h:form>
+	</div>
+
+
+
+
+</h:body>
+</html>

@@ -33,6 +33,7 @@ public class GestionnaireManagedBean implements Serializable{
 	@EJB
 	IGestionnaireService gestService;
 	
+	
 	/**Appel de la session
 	 * 
 	 */
@@ -118,9 +119,4 @@ public class GestionnaireManagedBean implements Serializable{
 		return "deco";
 	}
 	
-	
-	
-	
-	
-
 }

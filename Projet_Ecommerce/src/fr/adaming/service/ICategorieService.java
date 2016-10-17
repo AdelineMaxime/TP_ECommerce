@@ -8,9 +8,12 @@ package fr.adaming.service;
 
 import java.util.List;
 
+import javax.ejb.Local;
+
 import fr.adaming.model.Categorie;
 import fr.adaming.model.Produit;
 
+@Local
 public interface ICategorieService {
 //------------------------------1_Les propriétés (champs, attributs)-------------------------------------------
 	/**

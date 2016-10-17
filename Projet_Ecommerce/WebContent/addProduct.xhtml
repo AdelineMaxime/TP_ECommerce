@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title></title>
+</h:head>
+
+<h:body>
+	<ui:insert>
+		<ui:include src="/Templates/Menu_gestionnaire.xhtml" />
+	</ui:insert>
+	<h:form>
+		<p:panel id="panel" header="#{msg.add_prod}">
+
+			<h:panelGrid columns="2" cellpadding="5">
+				<p:outputLabel for="nom" value="#{msg.name}" />
+				<p:inputText id="nom" value="Get Name Product" required="true"
+					label="Login">
+				</p:inputText>
+
+				<p:outputLabel for="descr" value="#{msg.descr}" />
+				<p:inputText id="descr" value="Get Description" label="mdp"
+					required="true">
+				</p:inputText>
+
+				<p:outputLabel for="price" value="#{msg.price}" />
+				<p:inputText id="price" value="Get Price" label="mdp"
+					required="true">
+				</p:inputText>
+
+				<p:outputLabel for="qte" value="#{msg.qte}" />
+				<p:inputText id="qte" value="Get Quantity" label="mdp"
+					required="true">
+				</p:inputText>
+
+			</h:panelGrid>
+
+			<p:commandButton value="#{msg.add}" update="panel"
+				action="accueil_gest" icon="ui-icon-check" />
+
+		</p:panel>
+	</h:form>
+
+</h:body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title></title>
+</h:head>
+
+<h:body>
+	<ui:insert>
+		<ui:include src="/Templates/Menu_gestionnaire.xhtml" />
+	</ui:insert>
+	<div align="center">
+		<h:form>
+			<p:growl id="msg" showDetail="true" escape="false" />
+
+			<h3 style="margin-top: 0">#{msg.add_to_cat}</h3>
+			<p:pickList id="pickList" value="All Product MB" var="cities"
+				itemLabel="#{cities}" itemValue="#{cities}" />
+
+			<p:commandButton id="citySubmit" value="Submit"
+				update="displayCities" oncomplete="PF('cityDialog').show()"
+				style="margin-top:5px" />
+		</h:form>
+	</div>
+</h:body>
+</html>

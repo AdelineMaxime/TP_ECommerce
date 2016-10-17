@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title></title>
+</h:head>
+
+<h:body>
+	<ui:insert>
+		<ui:include src="/Templates/Menu_gestionnaire.xhtml" />
+	</ui:insert>
+	<h:form>
+		<p:panel id="panel" header="#{msg.ident}">
+
+			<h:panelGrid columns="2" cellpadding="5">
+				<p:outputLabel for="login" value="#{msg.log}" />
+				<p:inputText id="login" value="#{gestMB.login}" required="true"
+					label="Login">
+				</p:inputText>
+
+				<p:outputLabel for="mdp" value="#{msg.password}" />
+				<p:inputText id="mdp" value="#{gestMB.mdp}" label="mdp"
+					required="true">
+				</p:inputText>
+
+			</h:panelGrid>
+
+			<p:commandButton value="#{msg.log_in}" update="panel"
+				action="#{gestMB.isExist}" icon="ui-icon-check" />
+
+		</p:panel>
+	</h:form>
+
+</h:body>
+</html>
