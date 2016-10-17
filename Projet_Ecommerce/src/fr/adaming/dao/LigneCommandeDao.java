@@ -6,11 +6,13 @@
  */
 package fr.adaming.dao;
 
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import fr.adaming.model.LigneCommande;
 
+@Stateless
 public class LigneCommandeDao implements ILigneCommandeDao{
 //------------------------------1_Les propriétés (champs, attributs)-------------------------------------------
 	/**

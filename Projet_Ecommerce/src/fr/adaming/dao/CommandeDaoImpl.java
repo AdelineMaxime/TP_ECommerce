@@ -8,12 +8,14 @@ package fr.adaming.dao;
 
 import java.util.List;
 
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import fr.adaming.model.Client;
 import fr.adaming.model.Commande;
 
+@Stateless
 public class CommandeDaoImpl implements ICommandeDao{
 //------------------------------1_Les propriétés (champs, attributs)-------------------------------------------
 	/**
