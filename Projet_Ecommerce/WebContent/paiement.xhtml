@@ -2,16 +2,60 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 	<title></title>
 </h:head>
 
 <h:body>
+
+<ui:insert>
+<ui:include src="/Templates/" />
+</ui:insert>
+
+	<div align="center">
+		<h:form>
+			<p:commandButton id="cb" value="Carte Banquaire" type="button" />
+			<p:overlayPanel id="moviePanel" for="cb" hideEffect="fade"
+				dynamic="true" style="width:600px">
+				<p:panel id="panel" header="Paiement CB">
+
+					<h:panelGrid columns="2" cellpadding="5">
+						<p:outputLabel for="num" value="Num de carte" />
+						<p:inputText id="num" value="#{gestMB.login}" required="true"
+							label="0123456789">
+						</p:inputText>
+
+						<p:outputLabel for="code" value="Code sécurité" />
+						<p:inputText id="code" value="#{gestMB.mdp}" label="123"
+							required="true">
+						</p:inputText>
+
+						<p:outputLabel for="exp" value="Date expiration" />
+						<p:inputText id="exp" value="#{gestMB.mdp}" label="mdp"
+							required="true">
+						</p:inputText>
+					</h:panelGrid>
+
+					<p:commandButton value="Valider" icon="ui-icon-script"
+						actionListener="#{MB.ViewMessage}" />
+
+				</p:panel>
+			</p:overlayPanel>
+
+			<p:commandButton id="ch" value="Chèque" type="button" />
+			<p:overlayPanel id="cheque" for="ch" hideEffect="fade" dynamic="true"
+				style="width:600px">
+			Paiement à envoyer à Adaming.<br />
+			Traitement de la commande à réception.
+			</p:overlayPanel>
+		</h:form>
+	</div>
+
 
 </h:body>
 </html>

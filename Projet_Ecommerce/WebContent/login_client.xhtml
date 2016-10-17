@@ -2,16 +2,88 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 	<title></title>
 </h:head>
 
 <h:body>
+	<ui:insert>
+		<ui:include src="/Templates/Menu.xhtml" />
+	</ui:insert>
+
+	<div style="width: 450px">
+		<h:form>
+			<p:panel id="panel" header="Déjà Client">
+
+				<h:panelGrid columns="2" cellpadding="5">
+					<p:outputLabel for="nom" value="Nom" />
+					<p:inputText id="nom" value="Get Nom" required="true"
+						label="Login">
+					</p:inputText>
+
+					<p:outputLabel for="descr" value="Password" />
+					<p:inputText id="descr" value="Get Password" label="mdp"
+						required="true">
+					</p:inputText>
+
+				</h:panelGrid>
+
+				<p:commandButton value="Connexion" update="panel"
+					action="accueil_gest" icon="ui-icon-check" />
+
+			</p:panel>
+		</h:form>
+	</div>
+
+	<div style="width: 450px">
+		<h:form>
+			<p:panel id="panel" header="Créer compte">
+
+				<h:panelGrid columns="2" cellpadding="5">
+					<p:outputLabel for="nom" value="Nom" />
+					<p:inputText id="nom" value="Get Nom" required="true"
+						label="Login">
+					</p:inputText>
+
+					<p:outputLabel for="descr" value="Adresse" />
+					<p:inputText id="descr" value="Get Adresse" label="mdp"
+						required="true">
+					</p:inputText>
+
+					<p:outputLabel for="price" value="Tel" />
+					<p:inputText id="price" value="Get Tel" label="mdp"
+						required="true">
+					</p:inputText>
+
+					<p:outputLabel for="qte" value="Mail" />
+					<p:inputText id="qte" value="Get Mail" label="mdp"
+						required="true">
+					</p:inputText>
+
+					<p:outputLabel for="pass" value="Password" />
+					<p:inputText id="pass" value="Get Password" label="mdp"
+						required="true">
+					</p:inputText>
+
+				</h:panelGrid>
+
+				<p:commandButton value="#{msg.add}" update="panel"
+					action="accueil_gest" icon="ui-icon-check" />
+
+			</p:panel>
+		</h:form>
+	</div>
+
+
+	<ui:insert>
+		<ui:include src="/Templates/Footer.xhtml" />
+	</ui:insert>
+
 </h:body>
 
 </html>

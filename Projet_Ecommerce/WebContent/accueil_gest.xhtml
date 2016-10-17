@@ -11,14 +11,14 @@
 	<title>#{msg.home}</title>
 </h:head>
 
-<h:body>
+<h:body style="background-color:#FFFFF1">
 	<ui:insert>
 		<ui:include src="/Templates/Menu_gestionnaire.xhtml" />
 	</ui:insert>
 
 
 
-	<div align="center">
+	<div align="center" style="margin-bottom: 300px">
 		<h:form>
 			<p:growl id="messages" />
 
@@ -28,6 +28,9 @@
 				<p:separator />
 				<p:menuitem value="#{msg.delete_prod}" action="deleteProduct"
 					icon="ui-icon-doc-remove" />
+				<p:separator />
+				<p:menuitem value="#{msg.update_prod}" action="updateProduct"
+					icon="ui-icon-pencil" />
 			</p:splitButton>
 
 			<p:splitButton value="#{msg.gest_cat}">
@@ -36,13 +39,13 @@
 				<p:separator />
 				<p:menuitem value="#{msg.delete_cat}" action="deleteCat"
 					icon="ui-icon-doc-remove" />
-				<p:separator />
-				<p:menuitem value="#{msg.update_cat}" action="gestionCat" />
 			</p:splitButton>
 		</h:form>
 	</div>
 
-
+	<ui:insert>
+		<ui:include src="/Templates/Footer.xhtml" />
+	</ui:insert>
 
 
 </h:body>

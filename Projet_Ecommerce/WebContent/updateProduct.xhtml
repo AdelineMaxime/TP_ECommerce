@@ -8,37 +8,44 @@
 	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
-	<title>#{msg.add_prod}</title>
+	<title>#{msg.update_prod}</title>
 </h:head>
 
 <h:body>
 	<ui:insert>
 		<ui:include src="/Templates/Menu_gestionnaire.xhtml" />
 	</ui:insert>
-	
 	<h:form>
-		<p:panel id="panel" header="#{msg.add_prod}">
+		<p:panel id="panel" header="#{msg.update_prod}">
 
-			<h:panelGrid columns="2" cellpadding="5">
+
+
+			<h:panelGrid columns="3" cellpadding="5">
+
 				<p:outputLabel for="nom" value="#{msg.name}" />
 				<p:inputText id="nom" value="Get Name Product" required="true"
 					label="Login">
 				</p:inputText>
+				<h:commandButton action="accueil_gest" value="#{msg.OK}" />
 
 				<p:outputLabel for="descr" value="#{msg.descr}" />
 				<p:inputText id="descr" value="Get Description" label="mdp"
 					required="true">
 				</p:inputText>
+				<p:message for="descr" />
 
 				<p:outputLabel for="price" value="#{msg.price}" />
 				<p:inputText id="price" value="Get Price" label="mdp"
 					required="true">
 				</p:inputText>
+				<p:message for="price" />
 
 				<p:outputLabel for="qte" value="#{msg.qte}" />
 				<p:inputText id="qte" value="Get Quantity" label="mdp"
 					required="true">
 				</p:inputText>
+				<p:message for="qte" />
+
 
 				<p:outputLabel value="#{msg.cat}" for="dd" />
 				<p:autoComplete id="dd" dropdown="true" value="Get Catégorie"

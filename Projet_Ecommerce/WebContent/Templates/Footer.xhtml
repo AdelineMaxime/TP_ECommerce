@@ -2,10 +2,10 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 	<title></title>
@@ -13,18 +13,20 @@
 
 <h:body>
 
-<ui:composition>
+	<ui:composition>
 
-<h:form>  
-    <p:growl id="messages"/>
-    <p:menubar>
-        <f:facet name="footer">
-            <p:outputLabel value="©"/>
-        </f:facet>
-    </p:menubar>
-</h:form>
+		<div style="margin-top: 50px">
+			<h:form>
+				<p:growl id="messages" />
+				<p:menubar>
+					<f:facet name="options">
+						<p:outputLabel value="©" />
+					</f:facet>
+				</p:menubar>
+			</h:form>
+		</div>
 
-</ui:composition>
+	</ui:composition>
 
 </h:body>
 </html>
