@@ -34,7 +34,7 @@ public interface IClientDao {
 	 * 4_Méthodes
 	 */
 	public void addClientDao(Client client);
-	public void deleteClientDao(Long id_client);
+	public void deleteClientDao(long id_client);
 	public void updateClientDao(Client client);
 	public int isExistDao(String mail, String password);
 	public List<Client> getAllClientDao();

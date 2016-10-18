@@ -3,7 +3,7 @@
 	<persistence-unit name="PU" transaction-type="JTA">
 
 <!-- 	Gestion de la datasource (config de la connexion à la database -->
-		<jta-data-source>java:/db_ecommerce</jta-data-source>
+		<jta-data-source>java:/DB_Ecommerce</jta-data-source>
 		
 		<!-- Déclarer les classes ici -->
 		<class>fr.adaming.model.Gestionnaire</class>

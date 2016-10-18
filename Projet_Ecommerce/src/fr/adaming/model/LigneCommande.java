@@ -30,7 +30,7 @@ public class LigneCommande implements Serializable{
 	 */
 		@Id
 		@GeneratedValue
-		private Long id_LC;
+		private long id_LC;
 		
 		private int quantite;
 		private Double prix;
@@ -115,7 +115,14 @@ public class LigneCommande implements Serializable{
 		public void setPanier(Panier panier) {
 			this.panier = panier;
 		}
-//-------------------------------------------------------------------------------------------------------------
+		
+		public long getId_LC() {
+			return id_LC;
+		}
+		public void setId_LC(long id_LC) {
+			this.id_LC = id_LC;
+		}
+	//-------------------------------------------------------------------------------------------------------------
 //------------------------------4_Méthodes---------------------------------------------------------------------
 	/**
 	 * 4_Méthodes

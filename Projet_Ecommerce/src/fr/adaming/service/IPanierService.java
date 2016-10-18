@@ -31,7 +31,7 @@ public interface IPanierService {
 		 * 4_Méthodes
 		 */
 		public void addPanierService(Panier panier);
-		public void deletePanierService(Long id_panier);
+		public void deletePanierService(long id_panier);
 		public void updatePanierService(Panier panier);
 		public List<Panier> getAllPanierService();
 		public Panier getPanierByClientService();

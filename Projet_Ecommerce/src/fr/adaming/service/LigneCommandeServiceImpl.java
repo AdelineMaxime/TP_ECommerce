@@ -42,7 +42,7 @@ public class LigneCommandeServiceImpl implements ILigneCommandeService{
 	}
 
 	@Override
-	public void deleteLigneCService(Long id_LigneC) {
+	public void deleteLigneCService(long id_LigneC) {
 		ligneCDao.deleteLigneCDao(id_LigneC);
 		
 	}

@@ -35,7 +35,7 @@ public interface IPanierDao {
 	 * 4_Méthodes
 	 */
 	public void addPanierDao(Panier panier);
-	public void deletePanierDao(Long id_panier);
+	public void deletePanierDao(long id_panier);
 	public void updatePanierDao(Panier panier);
 	public List<Panier> getAllPanierDao();
 	public Panier getPanierByClientDao(Client client);

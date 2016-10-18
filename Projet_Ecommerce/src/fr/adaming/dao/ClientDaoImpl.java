@@ -21,7 +21,7 @@ public class ClientDaoImpl implements IClientDao{
 	/**
 	 * 1_Les propriétés (champs, attributs)
 	 */
-	@PersistenceContext
+	@PersistenceContext(unitName="PU")
 	EntityManager em;
 //-------------------------------------------------------------------------------------------------------------
 //------------------------------2_Les constructeurs------------------------------------------------------------	
@@ -40,12 +40,16 @@ public class ClientDaoImpl implements IClientDao{
 	 */
 
 	@Override
-	public void addClientDao(Client client) {
-		em.persist(client);	
+	public void addClientDao(Client client1) {
+		System.out.println("=============================>je suis dans le dao <===============================");
+		System.out.println("=============================>je suis dans le dao <===============================");
+		System.out.println("=============================>je suis dans le dao <===============================");
+		System.out.println("=============================>je suis dans le dao <===============================");
+		em.persist(client1);	
 	}
 
 	@Override
-	public void deleteClientDao(Long id_client) {
+	public void deleteClientDao(long id_client) {
 		Client client = em.find(Client.class, id_client);
 		em.remove(client);
 	}

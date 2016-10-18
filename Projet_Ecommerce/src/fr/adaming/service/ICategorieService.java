@@ -35,7 +35,7 @@ public interface ICategorieService {
 	 * 4_Méthodes
 	 */
 	public void addCategorieService(Categorie categorie);
-	public void deleteCategorieService(Long id_client);
+	public void deleteCategorieService(long id_client);
 	public void updateCategorieService(Categorie categorie);
 	public List<Categorie> getAllCategorieService();
 	public Categorie getCategorieByProduitService(Produit produit);

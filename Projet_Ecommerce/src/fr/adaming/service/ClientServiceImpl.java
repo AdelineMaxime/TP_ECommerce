@@ -9,10 +9,11 @@ package fr.adaming.service;
 import java.util.List;
 
 import javax.ejb.EJB;
+import javax.ejb.Stateful;
 
 import fr.adaming.dao.IClientDao;
 import fr.adaming.model.Client;
-
+@Stateful
 public class ClientServiceImpl implements IClientService{
 //------------------------------1_Les propriétés (champs, attributs)-------------------------------------------
 	/**
@@ -43,7 +44,7 @@ public class ClientServiceImpl implements IClientService{
 	}
 
 	@Override
-	public void deleteClientService(Long id_client) {
+	public void deleteClientService(long id_client) {
 		clientDao.deleteClientDao(id_client);
 		
 	}

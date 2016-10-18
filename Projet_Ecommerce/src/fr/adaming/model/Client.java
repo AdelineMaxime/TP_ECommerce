@@ -32,7 +32,7 @@ public class Client implements Serializable{
 	 */
 		@Id
 		@GeneratedValue(strategy=GenerationType.IDENTITY)
-		private Long id_client;
+		private long id_client;
 		
 		private String nom;
 		private String adresse;
@@ -82,7 +82,7 @@ public class Client implements Serializable{
 		 * @param tel
 		 * @param panier
 		 */
-		public Client(Long id_client, String nom, String adresse, String mail, String password, int tel) {
+		public Client(long id_client, String nom, String adresse, String mail, String password, int tel) {
 			super();
 			this.id_client = id_client;
 			this.nom = nom;
@@ -100,7 +100,7 @@ public class Client implements Serializable{
 		/**
 		 * @return the id_client
 		 */
-		public Long getId_client() {
+		public long getId_client() {
 			return id_client;
 		}
 		/**

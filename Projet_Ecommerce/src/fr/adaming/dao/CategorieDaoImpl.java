@@ -22,7 +22,7 @@ public class CategorieDaoImpl implements ICategorieDao{
 	/**
 	 * 1_Les propriétés (champs, attributs)
 	 */
-	@PersistenceContext
+	@PersistenceContext(unitName="PU")
 	EntityManager em;
 //-------------------------------------------------------------------------------------------------------------
 //------------------------------2_Les constructeurs------------------------------------------------------------	
@@ -47,7 +47,7 @@ public class CategorieDaoImpl implements ICategorieDao{
 	}
 
 	@Override
-	public void deleteCategorieDao(Long id_categorie) {
+	public void deleteCategorieDao(long id_categorie) {
 		Categorie categorie = em.find(Categorie.class, id_categorie);
 		em.remove(categorie);
 		

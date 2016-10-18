@@ -44,7 +44,7 @@ public class ProduitServiceImpl implements IProduitService{
 	}
 	
 	@Override
-	public void deleteProduitService(Long id_produit) {
+	public void deleteProduitService(long id_produit) {
 		produitDao.deleteProduitDao(id_produit);
 		
 	}
@@ -66,7 +66,7 @@ public class ProduitServiceImpl implements IProduitService{
 	}
 	
 	@Override
-	public Produit getProduitByIdService(Long id_produit) {
+	public Produit getProduitByIdService(long id_produit) {
 		return produitDao.getProduitByIdDao(id_produit);
 	}
 //-------------------------------------------------------------------------------------------------------------

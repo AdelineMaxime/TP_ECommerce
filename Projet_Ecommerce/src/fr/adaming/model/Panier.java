@@ -32,7 +32,7 @@ public class Panier implements Serializable{
 	 */
 		@Id
 		@GeneratedValue(strategy=GenerationType.IDENTITY)
-		private Long id_panier;
+		private long id_panier;
 		
 		private Double prixTotal;
 		
@@ -67,7 +67,7 @@ public class Panier implements Serializable{
 		 * @param id_panier
 		 * @param prixTotal
 		 */
-		public Panier(Long id_panier, Double prixTotal) {
+		public Panier(long id_panier, Double prixTotal) {
 			super();
 			this.id_panier = id_panier;
 			this.prixTotal = prixTotal;
@@ -80,7 +80,7 @@ public class Panier implements Serializable{
 		/**
 		 * @return the id_panier
 		 */
-		public Long getId_panier() {
+		public long getId_panier() {
 			return id_panier;
 		}
 		/**

@@ -44,7 +44,7 @@ public class PanierServiceImpl implements IPanierDao{
 	}
 
 	@Override
-	public void deletePanierDao(Long id_panier) {
+	public void deletePanierDao(long id_panier) {
 		panierDao.deletePanierDao(id_panier);
 		
 	}
