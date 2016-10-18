@@ -1,5 +1,6 @@
 package fr.adaming.managedBeans;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.ejb.EJB;
@@ -9,13 +10,16 @@ import javax.faces.bean.RequestScoped;
 import fr.adaming.model.Client;
 import fr.adaming.model.Commande;
 import fr.adaming.model.Panier;
-import fr.adaming.service.ClientServiceImpl;
 import fr.adaming.service.IClientService;
 
 @ManagedBean
 @RequestScoped
-public class TestBean {
-//------------------------------1_Les propriétés (champs, attributs)-------------------------------------------
+public class TestBean implements Serializable{
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//------------------------------1_Les propriétés (champs, attributs)-------------------------------------------
 	/**
 	 * 1_Les propriétés (champs, attributs)
 	 */
@@ -29,8 +33,8 @@ public class TestBean {
 	
 	private Panier panier;
 	
-	//@EJB
-	IClientService clientService = new ClientServiceImpl();
+	@EJB
+	IClientService clientService ;
 //------------------------------2_Les constructeurs------------------------------------------------------------	
 	/**
 	 * 2_Les constructeurs
@@ -96,10 +100,18 @@ public class TestBean {
 		this.setPassword("123456");
 		this.setTel(123456);
 		
-		Client client = new Client(2,nom, adresse, mail, password, tel);
-		System.out.println(client);
-		clientService.addClientService(client);
+		Client client = new Client(nom, adresse, mail, password, tel);
 		
+		System.out.println(client);
+		
+			clientService.addClientService(client);
+			
+		return "test.xhtml";
+	}
+	
+	public String delete(){
+		
+		clientService.deleteClientService(3);
 		return "test.xhtml";
 	}
 //-------------------------------------------------------------------------------------------------------------

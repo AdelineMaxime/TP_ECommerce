@@ -10,6 +10,7 @@ package fr.adaming.model;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.annotation.PostConstruct;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -43,8 +44,13 @@ public class Client implements Serializable{
 		@OneToMany(mappedBy="client")
 		private List<Commande> listeCommandes;
 		
-		@OneToOne(mappedBy="client")
+		@OneToOne(mappedBy="clientP")
 		private Panier panier;
+		
+		@PostConstruct
+		public void init(){
+			this.panier=new Panier();
+		}
 //-------------------------------------------------------------------------------------------------------------		
 //------------------------------2_Les constructeurs------------------------------------------------------------	
 	/**
@@ -71,7 +77,7 @@ public class Client implements Serializable{
 			this.mail = mail;
 			this.password = password;
 			this.tel = tel;
-			this.panier = new Panier();
+			//this.panier = new Panier();
 		}
 		/**
 		 * @param id_client

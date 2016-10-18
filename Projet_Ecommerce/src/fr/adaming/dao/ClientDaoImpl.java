@@ -41,11 +41,13 @@ public class ClientDaoImpl implements IClientDao{
 
 	@Override
 	public void addClientDao(Client client1) {
-		System.out.println("=============================>je suis dans le dao <===============================");
-		System.out.println("=============================>je suis dans le dao <===============================");
-		System.out.println("=============================>je suis dans le dao <===============================");
-		System.out.println("=============================>je suis dans le dao <===============================");
-		em.persist(client1);	
+		if(client1!=null){
+			System.out.println("=================================> client n'est pas null <===========================");
+			System.out.println("=================================> client n'est pas null <===========================");
+			System.out.println("=================================> client n'est pas null <===========================");
+			System.out.println("=================================> client n'est pas null <===========================");
+		em.persist(client1);
+		}
 	}
 
 	@Override
