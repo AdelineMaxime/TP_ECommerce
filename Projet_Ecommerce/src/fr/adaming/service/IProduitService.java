@@ -32,11 +32,11 @@ public interface IProduitService {
 		 * 4_Méthodes
 		 */
 		public void addProduitService(Produit produit);
-		public void deleteProduitService(Long id_produit);
+		public void deleteProduitService(long id_produit);
 		public void updateProduitService(Produit produit);
 		public List<Produit> getAllProduitService();
 		public List<Produit> getProduitByCategorieService(Categorie categorie);
-		public Produit getProduitByIdService(Long id_produit);
+		public Produit getProduitByIdService(long id_produit);
 	//-------------------------------------------------------------------------------------------------------------
 
 }

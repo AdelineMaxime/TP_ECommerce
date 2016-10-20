@@ -45,7 +45,7 @@ public class CategorieServiceImpl implements ICategorieService{
 	}
 
 	@Override
-	public void deleteCategorieService(Long id_client) {
+	public void deleteCategorieService(long id_client) {
 		categorieDao.deleteCategorieDao(id_client);
 		
 	}

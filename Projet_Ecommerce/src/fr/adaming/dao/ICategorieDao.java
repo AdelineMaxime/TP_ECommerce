@@ -35,7 +35,7 @@ public interface ICategorieDao {
 	 * 4_Méthodes
 	 */
 	public void addCategorieDao(Categorie categorie);
-	public void deleteCategorieDao(Long id_client);
+	public void deleteCategorieDao(long id_client);
 	public void updateCategorieDao(Categorie categorie);
 	public List<Categorie> getAllCategorieDao();
 	public Categorie getCategorieByProduitDao(Produit produit);

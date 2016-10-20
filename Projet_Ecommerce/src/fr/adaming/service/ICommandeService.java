@@ -32,7 +32,7 @@ public interface ICommandeService {
 		 * 4_Méthodes
 		 */
 		public void addCommandeService(Commande cmd);
-		public void deleteComandeService(Long id_cmd);
+		public void deleteComandeService(long id_cmd);
 		public List<Commande> getCommandesByClientService(Client client);
 	//-------------------------------------------------------------------------------------------------------------
 

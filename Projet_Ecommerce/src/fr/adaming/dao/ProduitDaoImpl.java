@@ -22,7 +22,7 @@ public class ProduitDaoImpl implements IProduitDao{
 	/**
 	 * 1_Les propriétés (champs, attributs)
 	 */
-	@PersistenceContext
+	@PersistenceContext(unitName="PU")
 	EntityManager em;
 //-------------------------------------------------------------------------------------------------------------
 //------------------------------2_Les constructeurs------------------------------------------------------------	
@@ -47,7 +47,7 @@ public class ProduitDaoImpl implements IProduitDao{
 	}
 
 	@Override
-	public void deleteProduitDao(Long id_produit) {
+	public void deleteProduitDao(long id_produit) {
 		Produit produit = em.find(Produit.class, id_produit);
 		em.remove(produit);
 	}
@@ -72,7 +72,7 @@ public class ProduitDaoImpl implements IProduitDao{
 	}
 
 	@Override
-	public Produit getProduitByIdDao(Long id_produit) {
+	public Produit getProduitByIdDao(long id_produit) {
 		String req ="SELECT a FROM Produit a WHERE a.id_produit=:id_p";
 		
 		Query query1 = em.createQuery(req);
@@ -81,5 +81,12 @@ public class ProduitDaoImpl implements IProduitDao{
 		
 		return (Produit) query1.getSingleResult();
 	}
+	@Override
+	public long getIdByNomProduitDao(String nomProduit) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 //-------------------------------------------------------------------------------------------------------------
+
+
 }

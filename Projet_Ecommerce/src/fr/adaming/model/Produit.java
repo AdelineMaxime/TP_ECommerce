@@ -32,7 +32,7 @@ public class Produit implements Serializable{
 	 */
 		@Id
 		@GeneratedValue(strategy=GenerationType.IDENTITY)
-		private Long id_produit;
+		private long id_produit;
 		
 		private String nom;
 		private String description;
@@ -80,7 +80,7 @@ public class Produit implements Serializable{
 		 * @param quantite
 		 * @param selection
 		 */
-		public Produit(Long id_produit, String nom, String description, Double prix, int quantite, boolean selection) {
+		public Produit(long id_produit, String nom, String description, Double prix, int quantite, boolean selection) {
 			super();
 			this.id_produit = id_produit;
 			this.nom = nom;

@@ -35,10 +35,11 @@ public interface IProduitDao {
 	 * 4_Méthodes
 	 */
 	public void addProduitDao(Produit produit);
-	public void deleteProduitDao(Long id_produit);
+	public void deleteProduitDao(long id_produit);
 	public void updateProduitDao(Produit produit);
 	public List<Produit> getAllProduitDao();
 	public List<Produit> getProduitByCategorieDao(Categorie categorie);
-	public Produit getProduitByIdDao(Long id_produit);
+	public Produit getProduitByIdDao(long id_produit);
+	public long getIdByNomProduitDao(String nomProduit);
 //-------------------------------------------------------------------------------------------------------------
 }

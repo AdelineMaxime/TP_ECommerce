@@ -18,7 +18,7 @@ public class LigneCommandeDao implements ILigneCommandeDao{
 	/**
 	 * 1_Les propriétés (champs, attributs)
 	 */
-	@PersistenceContext
+	@PersistenceContext(unitName="PU")
 	EntityManager em;
 //-------------------------------------------------------------------------------------------------------------
 //------------------------------2_Les constructeurs------------------------------------------------------------	
@@ -43,7 +43,7 @@ public class LigneCommandeDao implements ILigneCommandeDao{
 	}
 
 	@Override
-	public void deleteLigneCDao(Long id_LigneC) {
+	public void deleteLigneCDao(long id_LigneC) {
 		LigneCommande ligneC = em.find(LigneCommande.class, id_LigneC);
 		
 		em.remove(ligneC);

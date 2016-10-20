@@ -8,8 +8,10 @@ package fr.adaming.service;
 
 import java.util.List;
 
-import fr.adaming.model.Client;
+import javax.ejb.Local;
 
+import fr.adaming.model.Client;
+@Local
 public interface IClientService {
 	//------------------------------1_Les propriétés (champs, attributs)-------------------------------------------
 		/**
@@ -31,7 +33,7 @@ public interface IClientService {
 		 * 4_Méthodes
 		 */
 		public void addClientService(Client client);
-		public void deleteClientService(Long id_client);
+		public void deleteClientService(long id_client);
 		public void updateClientService(Client client);
 		public int isExistService(String mail, String password);
 		public List<Client> getAllClientService();

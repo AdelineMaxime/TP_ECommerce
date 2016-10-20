@@ -22,7 +22,7 @@ public class PanierDaoImpl implements IPanierDao{
 	/**
 	 * 1_Les propriétés (champs, attributs)
 	 */
-	@PersistenceContext
+	@PersistenceContext(unitName="PU")
 	EntityManager em;
 //-------------------------------------------------------------------------------------------------------------
 //------------------------------2_Les constructeurs------------------------------------------------------------	
@@ -47,7 +47,7 @@ public class PanierDaoImpl implements IPanierDao{
 	}
 
 	@Override
-	public void deletePanierDao(Long id_panier) {
+	public void deletePanierDao(long id_panier) {
 		Panier panier = em.find(Panier.class, id_panier);
 		
 		em.remove(panier);

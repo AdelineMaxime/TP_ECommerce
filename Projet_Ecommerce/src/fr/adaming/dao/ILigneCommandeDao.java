@@ -32,7 +32,7 @@ public interface ILigneCommandeDao {
 	 * 4_Méthodes
 	 */
 	public void addLigneCDao(LigneCommande LigneC);
-	public void deleteLigneCDao(Long id_LigneC);
+	public void deleteLigneCDao(long id_LigneC);
 	public void updateLigneCDao(LigneCommande LigneC);
 //-------------------------------------------------------------------------------------------------------------
 }

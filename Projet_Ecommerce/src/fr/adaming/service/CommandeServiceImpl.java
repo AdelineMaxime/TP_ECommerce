@@ -44,7 +44,7 @@ public class CommandeServiceImpl implements ICommandeService{
 	}
 
 	@Override
-	public void deleteComandeService(Long id_cmd) {
+	public void deleteComandeService(long id_cmd) {
 		cmdDao.deleteComandeDao(id_cmd);
 		
 	}

@@ -29,7 +29,7 @@ public interface ILigneCommandeService {
 		 * 4_Méthodes
 		 */
 		public void addLigneCService(LigneCommande LigneC);
-		public void deleteLigneCService(Long id_LigneC);
+		public void deleteLigneCService(long id_LigneC);
 		public void updateLigneCService(LigneCommande LigneC);
 	//-------------------------------------------------------------------------------------------------------------
 

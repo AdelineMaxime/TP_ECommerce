@@ -21,7 +21,7 @@ public class CommandeDaoImpl implements ICommandeDao{
 	/**
 	 * 1_Les propriétés (champs, attributs)
 	 */
-	@PersistenceContext
+	@PersistenceContext(unitName="PU")
 	EntityManager em;
 //-------------------------------------------------------------------------------------------------------------
 //------------------------------2_Les constructeurs------------------------------------------------------------	
@@ -46,7 +46,7 @@ public class CommandeDaoImpl implements ICommandeDao{
 	}
 
 	@Override
-	public void deleteComandeDao(Long id_cmd) {
+	public void deleteComandeDao(long id_cmd) {
 		Commande cmd = em.find(Commande.class, id_cmd);
 		em.remove(cmd);
 		

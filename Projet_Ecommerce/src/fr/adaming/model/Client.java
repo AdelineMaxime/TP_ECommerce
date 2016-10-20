@@ -10,6 +10,7 @@ package fr.adaming.model;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.annotation.PostConstruct;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -32,7 +33,7 @@ public class Client implements Serializable{
 	 */
 		@Id
 		@GeneratedValue(strategy=GenerationType.IDENTITY)
-		private Long id_client;
+		private long id_client;
 		
 		private String nom;
 		private String adresse;
@@ -43,8 +44,13 @@ public class Client implements Serializable{
 		@OneToMany(mappedBy="client")
 		private List<Commande> listeCommandes;
 		
-		@OneToOne(mappedBy="client")
+		@OneToOne(mappedBy="clientP")
 		private Panier panier;
+		
+		@PostConstruct
+		public void init(){
+			this.panier=new Panier();
+		}
 //-------------------------------------------------------------------------------------------------------------		
 //------------------------------2_Les constructeurs------------------------------------------------------------	
 	/**
@@ -71,7 +77,7 @@ public class Client implements Serializable{
 			this.mail = mail;
 			this.password = password;
 			this.tel = tel;
-			this.panier = new Panier();
+			//this.panier = new Panier();
 		}
 		/**
 		 * @param id_client
@@ -82,7 +88,7 @@ public class Client implements Serializable{
 		 * @param tel
 		 * @param panier
 		 */
-		public Client(Long id_client, String nom, String adresse, String mail, String password, int tel) {
+		public Client(long id_client, String nom, String adresse, String mail, String password, int tel) {
 			super();
 			this.id_client = id_client;
 			this.nom = nom;
@@ -100,7 +106,7 @@ public class Client implements Serializable{
 		/**
 		 * @return the id_client
 		 */
-		public Long getId_client() {
+		public long getId_client() {
 			return id_client;
 		}
 		/**

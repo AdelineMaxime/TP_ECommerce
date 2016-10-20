@@ -35,7 +35,7 @@ public interface ICommandeDao {
 	 * 4_Méthodes
 	 */
 	public void addCommandeDao(Commande cmd);
-	public void deleteComandeDao(Long id_cmd);
+	public void deleteComandeDao(long id_cmd);
 	public List<Commande> getCommandesByClientDao(Client client);
 //-------------------------------------------------------------------------------------------------------------
 }
