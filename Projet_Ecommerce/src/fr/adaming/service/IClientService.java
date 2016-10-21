@@ -37,6 +37,7 @@ public interface IClientService {
 		public void updateClientService(Client client);
 		public int isExistService(String mail, String password);
 		public List<Client> getAllClientService();
+		public int isExistService(String mail);
 	//-------------------------------------------------------------------------------------------------------------
 
 }

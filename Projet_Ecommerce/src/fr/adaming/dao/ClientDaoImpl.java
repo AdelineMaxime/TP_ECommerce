@@ -79,6 +79,23 @@ public class ClientDaoImpl implements IClientDao{
 			return 0;
 		}
 	}
+	
+	@Override
+	public int isExistDao(String mail) {
+		//Créeation de la requete
+		String req ="SELECT a From Client a Where a.mail=:pLogin";
+		Query query1 = em.createQuery(req);
+		
+		query1.setParameter("pLogin", mail);
+		
+		List<Client> liste = query1.getResultList();
+		
+		if(!liste.isEmpty()){
+			return 1;
+		}else{
+			return 0;
+		}
+	}
 
 	@Override
 	public List<Client> getAllClientDao() {
